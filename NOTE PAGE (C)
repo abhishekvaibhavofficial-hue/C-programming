@@ -1,0 +1,271 @@
+Ctrl + Alt + n to run
+
+operands means the data on which operator will act.
+
+boolen value means either true or false.
+
+#define is a macro use to define a func. as constant.no terminator needed    ex. #define PI 3.14
+
+"%.2f" we write this to tell compiler that the given value is float and its decimal value should not move after 2 points.
+
+by clicking on alt we can create multiple cursor to write at once in same time.
+
+instructions are case sensitive and will be follwed up in order.
+
+We use "\n" after %d to change the lines in output.EX. intf ("the values are %d\n ", a );printf("the char value is %c\n ", b);printf("the float value is %f\n ", c);return 0;
+
+; is use to terminate the statement in c laguage
+
+
+shrtcut to mark comment = ctrl + /, Comments are of twotype:-
+1. single line comment , ctrl + / , ex. //i am joking
+2. multyline comments , ex. /* ..... */ , 
+
+How to run C Programming in this VS Code
+first create a file.
+press Ctrl + shift + b 
+an exe file will be save 
+now go too terminal and write 
+(./FILENAME.exe)
+
+what should we have to print , we put them in "", in printf statement. ex.
+printf(" sum is %d",sum);
+it means that compiler will print "sum is 50" as it understands that it should be printed and the output will be in place of %d 
+and when you write ",sum", it makes compiler know that what should be taken in place of %d. 
+
+EXPLAINATION OF LINES OF CODE
+
+
+#include <stdio.h>
+int main (){
+    printf("i am a disco dancer");
+    return 0;
+}
+
+Header Files Inclusion - Line 1 [#include <stdio.h>]
+The .h files are called header files in C.  A header file is a file with extension .h .
+
+stdio.h - Defines core input and output functions~
+
+| Header              | Purpose / What It Provides                                                             |
+| ------------------- | -------------------------------------------------------------------------------------- |
+|   <assert.h>        | Defines the `assert()` macro for runtime diagnostics (used for debugging).             |
+| **<complex.h>**     | Supports complex number arithmetic (`complex`, `I`, etc.).                             |
+| **<ctype.h>**       | Character classification and conversion (`isalpha()`, `isdigit()`, `tolower()`, etc.). |
+| **<errno.h>**       | Defines error codes (`errno`, `EIO`, etc.) used by system/library calls.               |
+| **<fenv.h>**        | Floating-point environment control (rounding, exceptions, etc.).                       |
+| **<float.h>**       | Defines floating-point limits and characteristics (like `FLT_MAX`, `DBL_MIN`).         |
+| **<inttypes.h>**    | Exact-width integer types and macros for formatting them (`int32_t`, `PRId64`, etc.).  |
+| **<iso646.h>**      | Alternative operator spellings (`and`, `or`, `not`, etc.) for non-ASCII keyboards.     |
+| **<limits.h>**      | Defines integer limits (`INT_MAX`, `CHAR_BIT`, etc.).                                  |
+| **<locale.h>**      | Localization settings (number, date formats, etc.) using `setlocale()`.                |
+| **<math.h>**        | Common mathematical functions (`sin()`, `sqrt()`, `pow()`, etc.).                      |
+| **<setjmp.h>**      | Jump functions for nonlocal goto (`setjmp()`, `longjmp()`).                            |
+| **<signal.h>**      | Signal handling (`signal()`, `raise()` for interrupts, etc.).                          |
+| **<stdalign.h>**    | Macros for alignment control (`alignas`, `alignof`).                                   |
+| **<stdarg.h>**      | Variable argument lists (`va_start`, `va_arg`, `va_end`).                              |
+| **<stdatomic.h>**   | Atomic types and operations for multithreading.                                        |
+| **<stdbool.h>**     | Boolean type `_Bool` and macros `true` / `false`.                                      |
+| **<stddef.h>**      | Common definitions like `size_t`, `ptrdiff_t`, `NULL`, and `offsetof()`.               |
+| **<stdint.h>**      | Fixed-width integer types (`int8_t`, `uint64_t`, etc.).                                |
+| **<stdio.h>**       | Input/output (`printf()`, `scanf()`, `FILE`, etc.).                                    |
+| **<stdlib.h>**      | General utilities (`malloc()`, `free()`, `atoi()`, `rand()`, `exit()`, etc.).          |
+| **<stdnoreturn.h>** | Defines the `noreturn` function specifier.                                             |
+| **<string.h>**      | String handling (`strlen()`, `strcpy()`, `memcpy()`, etc.).                            |
+| **<tgmath.h>**      | Type-generic macros for math functions (works with real and complex).                  |
+| **<threads.h>**     | Thread support (`thrd_t`, `mtx_t`, `cnd_t`, etc.).                                     |
+| **<time.h>**        | Date and time utilities (`time()`, `clock()`, `strftime()`, etc.).                     |
+| **<uchar.h>**       | Unicode character types (`char16_t`, `char32_t`).                                      |
+| **<wchar.h>**       | Wide-character utilities (`wprintf()`, `wcscmp()`, etc.).                              |
+| **<wctype.h>**      | Classification and conversion of wide characters (`iswalpha()`, `towlower()`).         |
+
+| Header                                               | Purpose                                                         |
+| ---------------------------------------------------- | --------------------------------------------------------------- |
+| **<unistd.h>**                                       | POSIX API — system calls (`read()`, `write()`, `fork()`, etc.). |
+| **<sys/types.h>**                                    | Defines system data types (`pid_t`, `size_t`, etc.).            |
+| **<sys/stat.h>**                                     | File information (`stat()`, `fstat()` structures).              |
+| **<fcntl.h>**                                        | File control operations (`open()`, `O_RDONLY`, etc.).           |
+| **<dirent.h>**                                       | Directory traversal (`opendir()`, `readdir()`).                 |
+| **<pthread.h>**                                      | POSIX threads (`pthread_create()`, `pthread_mutex_lock()`).     |
+| **<dlfcn.h>**                                        | Dynamic loading of shared libraries (`dlopen()`, `dlsym()`).    |
+| **<netinet/in.h>**, **<arpa/inet.h>**, **<netdb.h>** | Networking and sockets.                                         |
+| **<sys/socket.h>**                                   | Socket API (`socket()`, `bind()`, `connect()`, etc.).           |
+| **<sys/time.h>**                                     | Time structures (`struct timeval`, `gettimeofday()`).           |
+| **<termios.h>**                                      | Terminal I/O control.                                           |
+| **<signal.h>**                                       | POSIX signals (extended).                                       |
+| **<windows.h>**                                      | (Windows only) Windows API access.                              |
+
+
+Main Method Declaration - Line 2 [int main()]
+
+The next part of a C program is the main() function. It is the entry point of a C program.
+
+Body of Main Method - Line 3 to Line 6 [enclosed in {}]
+The body of the main method in the C program refers to statements that are a part of the main function..
+It can be anything like manipulations, searching, sorting, printing, etc.
+A pair of curly brackets define the body of a function. All functions must start and end with curly brackets.
+
+Comment - Line 7[// This prints "Hello World"]
+The comments are used for the documentation of the code or to add notes in your program that are ignored by the compiler and are not the part of executable program .
+
+Statement - Line 4 [printf("Hello World");]
+Statements are the instructions given to the compiler. In C, a statement is always terminated by a semicolon (;).
+In this particular case, we use printf() function to instruct the compiler to display "Hello World" text on the screen.
+
+Return Statement - Line 5 [return 0;]
+The last part of any C function is the return statement.
+The return statement refers to the return values from a function.
+This return statement and return value depend upon the return type of the function.
+The return statement in our program returns the value from main().
+The returned value may be used by an operating system to know the termination status of your program. 
+The value 0 typically means successful termination. 
+
+
+Identifiers in C:
+It is a name that uniquely identifies a program element and can be used to refer to it later in the program.
+ex.
+// Creating a variable
+int val = 10; //here val is identifier
+
+// Creating a function
+void func() {} //here func is identifier
+
+Rules for Naming Identifiers in C:
+1.
+Identifier can contain following characters:
+Uppercase (A-Z) and lowercase (a-z) alphabets.
+Numeric digits (0-9).
+Underscore (_).
+2.
+the first letter of identifier must be a letter or "_",
+3.
+identifiers are case sensitive.
+4.
+Identifiers cannot be keywords in C (such as int, return, if, while etc.).
+5.
+There should be no space between letters.
+
+example codes:
+#include <stdio.h>
+
+int main() {
+      
+      int var; // Creating an integer variable and // assign it the identifier 'var'
+
+      var = 10; // Assigning value to the variable // using assigned name
+
+      printf("%d", var);   // Referring to same variable using // assigned name
+      
+      return 0;
+}
+  
+
+
+Keyword:
+
+Defination - keyword is a reserved word with a special meaning in C that cannot be used as an identifier.
+Keywords are predefined or reserved words that have special meanings to the compiler
+Usage - Keywords are predefined in the C language and are used to define the structure and control flow of the program (e.g., int, if, while).
+Example - int, return, for, if, while
+Modification - Keywords cannot be modified or used for any other purpose.
+Position of code - Keywords are part of the syntax of C and are used to structure the program.
+Case Sensitivity - Keywords are case-sensitive (e.g., int and Int are different).
+
+Identifiers:
+
+Defination - An identifier is a user-defined name used to refer to variables, functions, arrays, etc.
+Usage - Identifiers are used by programmers to name variables, functions, and other user-defined elements (e.g., age, sum, main).
+Example - totalAmount, studentAge, calculateTotal
+Modification - Identifiers can be created and used as per the programmer’s needs.
+Position of code - Identifiers are used for variable names, function names, and more throughout the code.
+Case Sensitivity - Identifiers are also case-sensitive (e.g., age and Age are different).
+
+
+
+
+#include <stdio.h>   // Preprocessor directive
+
+int main() {         // 'int' and 'return' are keywords; 'main' is an identifier
+    int number1 = 10;   // 'int' is a keyword, 'number1' is a variable/identifier
+    int number2 = 20;   // another variable
+    int sum;            // variable to store the result
+
+    sum = number1 + number2;   // calculation
+
+    printf("The sum is: %d\n", sum);  // display result
+
+    return 0;   // keyword 'return' ends the main function
+}
+
+
+
+VARIABLES = Variables are containers for storing data values, like numbers and characters.
+there are different types of variables 
+1. int is use for giving integer value, whole no., ex- 193 or -193
+2. float stores decimal or floating numbers.
+3. char is use for giving a charecter value to variables.
+
+
+To create a variable , first define its type and then assign its value.
+
+
+
+
+To combine both text and a variable, separate them with a comma inside the printf() function:
+Example
+int myNum = 15;
+printf("My favorite number is: %d", myNum);
+
+
+To print different types in a single printf() function, you can use the following:
+Example
+int myNum = 15;
+char myLetter = 'D';
+printf("My number is %d and my letter is %c", myNum, myLetter);
+
+
+C Variable Initialization
+Once the variable is declared, we can store useful values in it. The first value we store is called initial value and the process is called Initialization. It is done using assignment operator (=).
+It is important to initialize a variable because a C variable only contains garbage value when it is declared. We can also initialize a variable along with declaration.
+
+
+
+
+to know how much memory does int, float, char takes in your computer run this code,
+#include <stdio.h>
+int main (){
+    printf("Size of int: %zu bytes\n", sizeof(int));
+    printf("Size of char: %zu bytes\n", sizeof(char));
+    printf("Size of float: %zu bytes\n", sizeof(float));
+    return 0;
+}
+
+
+
+
+INSTRUCTIONS :-
+1. Type Declaration Instruction.
+2. Arithmatic Instruction
+3. Control Instruction
+
+OR GATE :- "||"
+0  0  0
+1  1  1
+0  1  1
+1  0  1
+
+AND GATE :- "&&"
+0  0  0
+0  1  0
+1  0  0
+1  1  1
+
+NOT GATE :- "!"
+0   1
+1   0
+
+XOR GATE :-""
+0  0  1
+0  1  0
+1  0  0
+1  1  0
